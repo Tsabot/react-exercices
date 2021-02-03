@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../_lib/Layout";
 import Sounds from "./Sounds";
-import { Sound } from "./Sounds/Sounds";
+import SoundType from "./domain/sound";
 
-const sounds: Sound[] = [
+const sounds: SoundType[] = [
   { species: "cow", sound: "moo" },
   { species: "duck", sound: "quack" },
   { species: "cat", sound: "meow" },

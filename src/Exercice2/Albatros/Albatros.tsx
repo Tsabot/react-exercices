@@ -13,24 +13,18 @@ interface Props {}
 
 export const Albatros: React.FunctionComponent<Props> = () => {
   return (
-    <div className="Albatros__Framing--Red">
-      <div className="Albatros__Framing--Green">
-        <div className="Albatros__Framing--Blue">
-          <div className="Albatros__Content">
-            <ul className="standard-margin">
-              {ALBATROS_FIRST_STANZA.map((text) => (
-                <li key={text}>
-                  <Verse text={text} />
-                </li>
-              ))}
-            </ul>
-            <div className="standard-margin">
-              <a href="https://www.poetica.fr/poeme-127/charles-baudelaire-albatros/">
-                L'albatros, Charles Baudelaire
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="Albatros__Content">
+      <ul className="standard-margin">
+        {ALBATROS_FIRST_STANZA.map((text) => (
+          <li key={text}>
+            <Verse text={text} />
+          </li>
+        ))}
+      </ul>
+      <div className="standard-margin">
+        <a href="https://www.poetica.fr/poeme-127/charles-baudelaire-albatros/">
+          L'albatros, Charles Baudelaire
+        </a>
       </div>
     </div>
   );

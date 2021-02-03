@@ -1,22 +1,17 @@
 import React from "react";
+import SoundItem from "./Sound";
+import SoundType from "../domain/sound";
 
-export interface Sound {
-  species: string;
-  sound: string;
-}
 
 interface Props {
-  sounds: Sound[];
+  sounds: SoundType[];
 }
 
 export const Sounds: React.FunctionComponent<Props> = ({ sounds }) => {
   return (
     <ul>
-      {sounds.map(({ species, sound }) => (
-        <li
-          key={species}
-          className="standard-margin"
-        >{`The ${species} goes "${sound}"!`}</li>
+      {sounds.map((sound) => (
+        <SoundItem sound={sound} />
       ))}
     </ul>
   );
